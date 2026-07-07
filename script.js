@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const message = document.getElementById("fmsg").value.trim();
 
     // Send to WhatsApp as fallback (can be replaced with a backend endpoint/Formspree)
-    const waNumber = "6281234567890";
+    const waNumber = "6281290246038";
     const waText = encodeURIComponent(
       `Hello, I am ${name} (${phone}) interested in Branz Mega Kuningan.${message ? "\n\nMessage: " + message : ""}`,
     );
