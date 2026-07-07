@@ -346,6 +346,54 @@ h2 {
   writing-mode: vertical-rl;
 }
 
+.hero-pricing {
+  position: absolute;
+  bottom: 8rem;
+  right: 2.5rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.hero-pricing-card {
+  background: rgba(18,21,28,0.45);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  border: 1px solid rgba(201,161,93,0.25);
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+.hero-pricing-card:hover {
+  border-color: rgba(201,161,93,0.5);
+  background: rgba(18,21,28,0.55);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.hero-pricing-label {
+  font-family: var(--font-utility);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(245,242,236,0.6);
+  line-height: 1.4;
+  margin-bottom: 0.15rem;
+}
+.hero-pricing-value {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--brass);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.hero-pricing-unit {
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
 /* ===================================================
    ABOUT
 =================================================== */
@@ -830,11 +878,35 @@ h2 {
   .location-map { aspect-ratio: 16/10; }
 
   .form-row { grid-template-columns: 1fr; }
+
+  .hero-pricing {
+    bottom: 2rem;
+    right: 1.4rem;
+  }
 }
 
 @media (max-width: 560px) {
   .hero-content { padding: 0 1.4rem 5rem; }
   .hero-scrollcue { display: none; }
+  .hero-pricing {
+    position: static;
+    flex-direction: row;
+    gap: 0.7rem;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+  }
+  .hero-pricing-card {
+    padding: 0.8rem 1.4rem;
+  }
+  .hero-pricing-label {
+    font-size: 0.7rem;
+  }
+  .hero-pricing-value {
+    font-size: 1.25rem;
+  }
+  .hero-pricing-unit {
+    font-size: 0.8rem;
+  }
   .about, .units, .location, .cta { padding-left: 1.4rem; padding-right: 1.4rem; }
   .facilities { padding-left: 1.4rem; padding-right: 1.4rem; }
   .facilities-grid { grid-template-columns: 1fr; }
