@@ -844,18 +844,18 @@ h2 {
 =================================================== */
 .fab-wa {
   position: fixed;
-  bottom: 1.6rem; right: 1.6rem;
-  width: 56px; height: 56px;
+  bottom: 1.8rem; right: 1.8rem;
+  width: 68px; height: 68px;
   background: #25D366;
   color: white;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
   z-index: 90;
   transition: transform 0.3s var(--ease);
 }
 .fab-wa:hover { transform: scale(1.08); }
-.fab-wa svg { width: 28px; height: 28px; }
+.fab-wa svg { width: 34px; height: 34px; }
 
 /* ===================================================
    RESPONSIVE
