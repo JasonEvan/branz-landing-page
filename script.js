@@ -92,21 +92,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const name = document.getElementById("fname").value.trim();
     const phone = document.getElementById("fphone").value.trim();
+    const email = document.getElementById("femail").value.trim();
     const message = document.getElementById("fmsg").value.trim();
 
-    // Send to WhatsApp as fallback (can be replaced with a backend endpoint/Formspree)
-    const waNumber = "6281290246038";
-    const waText = encodeURIComponent(
-      `Hello, I am ${name} (${phone}) interested in Branz Mega Kuningan.${message ? "\n\nMessage: " + message : ""}`,
-    );
+    const data = { name, phone, email, message };
 
-    form.style.display = "none";
-    success.classList.add("show");
-
-    // Open WhatsApp in a new tab after a slight delay for smooth UX
-    setTimeout(() => {
-      window.open(`https://wa.me/${waNumber}?text=${waText}`, "_blank");
-    }, 900);
+    fetch("https://formspree.io/f/meebdynw", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then(() => {
+        form.style.display = "none";
+        success.classList.add("show");
+      })
+      .catch(() => {
+        form.style.display = "none";
+        success.classList.add("show");
+      });
   });
 
   /* ---------- Room type data ---------- */
@@ -227,7 +230,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <button class="room-btn">View Detail ${iconArrow}</button>
       </div>
     `;
-    card.querySelector(".room-btn").addEventListener("click", () => openModal(i));
+    card
+      .querySelector(".room-btn")
+      .addEventListener("click", () => openModal(i));
     grid.appendChild(card);
     io.observe(card);
   });
@@ -251,7 +256,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Dots
     dots.innerHTML = room.images
-      .map((_, i) => `<span class="modal-dot${i === 0 ? " active" : ""}"></span>`)
+      .map(
+        (_, i) => `<span class="modal-dot${i === 0 ? " active" : ""}"></span>`,
+      )
       .join("");
 
     // Info panel
@@ -311,15 +318,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const imgs = track.querySelectorAll("img");
     const dotEls = dots.querySelectorAll(".modal-dot");
-    imgs.forEach((img, i) => img.classList.toggle("active", i === currentSlide));
-    dotEls.forEach((dot, i) => dot.classList.toggle("active", i === currentSlide));
+    imgs.forEach((img, i) =>
+      img.classList.toggle("active", i === currentSlide),
+    );
+    dotEls.forEach((dot, i) =>
+      dot.classList.toggle("active", i === currentSlide),
+    );
     updateCounter();
   }
 
   /* ---------- Modal event listeners ---------- */
   document.getElementById("modalClose").addEventListener("click", closeModal);
-  document.getElementById("modalPrev").addEventListener("click", () => goToSlide(currentSlide - 1));
-  document.getElementById("modalNext").addEventListener("click", () => goToSlide(currentSlide + 1));
+  document
+    .getElementById("modalPrev")
+    .addEventListener("click", () => goToSlide(currentSlide - 1));
+  document
+    .getElementById("modalNext")
+    .addEventListener("click", () => goToSlide(currentSlide + 1));
 
   modal.addEventListener("click", (e) => {
     if (e.target === modal) closeModal();
@@ -327,24 +342,76 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
-    if (e.key === "ArrowLeft" && modal.classList.contains("open")) goToSlide(currentSlide - 1);
-    if (e.key === "ArrowRight" && modal.classList.contains("open")) goToSlide(currentSlide + 1);
+    if (e.key === "ArrowLeft" && modal.classList.contains("open"))
+      goToSlide(currentSlide - 1);
+    if (e.key === "ArrowRight" && modal.classList.contains("open"))
+      goToSlide(currentSlide + 1);
   });
 
   /* ---------- Tenant data ---------- */
   const tenantData = [
-    { category: "dining", name: "Burma", sub: "Myanmar restaurant with authentic Southeast Asian cuisine" },
-    { category: "dining", name: "Gure", sub: "Artisan gelato & specialty coffee shop" },
-    { category: "dining", name: "Imperial Dimsum", sub: "Chinese restaurant specializing in premium dimsum" },
-    { category: "dining", name: "Murasaki", sub: "Authentic Japanese izakaya dining experience" },
-    { category: "dining", name: "Fog by Amalfi", sub: "Italian restaurant with Mediterranean flavour", comingSoon: true },
-    { category: "dining", name: "Enkaku by Shikaku", sub: "Yakitori place by the renowned Dharmawangsa institution", comingSoon: true },
-    { category: "shopping", name: "Kem Chicks", sub: "Premium supermarket with imported & gourmet selection" },
-    { category: "shopping", name: "Arden Grove by BRANZ Mega Kuningan", sub: "Luxury retail & lifestyle destination" },
-    { category: "wellness", name: "Annathaya Spa", sub: "Full-service spa & relaxation sanctuary" },
-    { category: "wellness", name: "Rogue & Beyond", sub: "Premium barber shop & grooming lounge" },
-    { category: "entertainment", name: "Virtual Golf Simulator", sub: "In-door golf simulator with cutting edge VR technology" },
-    { category: "entertainment", name: "Enjyu Nojo", sub: "Premium Wagyu A5 Japanese barbeque experience" },
+    {
+      category: "dining",
+      name: "Burma",
+      sub: "Myanmar restaurant with authentic Southeast Asian cuisine",
+    },
+    {
+      category: "dining",
+      name: "Gure",
+      sub: "Artisan gelato & specialty coffee shop",
+    },
+    {
+      category: "dining",
+      name: "Imperial Dimsum",
+      sub: "Chinese restaurant specializing in premium dimsum",
+    },
+    {
+      category: "dining",
+      name: "Murasaki",
+      sub: "Authentic Japanese izakaya dining experience",
+    },
+    {
+      category: "dining",
+      name: "Fog by Amalfi",
+      sub: "Italian restaurant with Mediterranean flavour",
+      comingSoon: true,
+    },
+    {
+      category: "dining",
+      name: "Enkaku by Shikaku",
+      sub: "Yakitori place by the renowned Dharmawangsa institution",
+      comingSoon: true,
+    },
+    {
+      category: "shopping",
+      name: "Kem Chicks",
+      sub: "Premium supermarket with imported & gourmet selection",
+    },
+    {
+      category: "shopping",
+      name: "Arden Grove by BRANZ Mega Kuningan",
+      sub: "Luxury retail & lifestyle destination",
+    },
+    {
+      category: "wellness",
+      name: "Annathaya Spa",
+      sub: "Full-service spa & relaxation sanctuary",
+    },
+    {
+      category: "wellness",
+      name: "Rogue & Beyond",
+      sub: "Premium barber shop & grooming lounge",
+    },
+    {
+      category: "entertainment",
+      name: "Virtual Golf Simulator",
+      sub: "In-door golf simulator with cutting edge VR technology",
+    },
+    {
+      category: "entertainment",
+      name: "Enjyu Nojo",
+      sub: "Premium Wagyu A5 Japanese barbeque experience",
+    },
   ];
 
   const categoryIcons = {
