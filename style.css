@@ -614,6 +614,21 @@ h2 {
   position: relative;
   z-index: 1;
 }
+.pricing-footnote {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.92rem;
+  color: var(--slate);
+  font-family: var(--font-utility);
+}
+.pricing-footnote a {
+  color: var(--brass-soft);
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+.pricing-footnote a:hover {
+  color: var(--brass);
+}
 
 /* ===================================================
    UNITS — window gallery signature
