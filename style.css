@@ -1059,6 +1059,156 @@ h2 {
 }
 
 /* ===================================================
+   TENANTS
+=================================================== */
+.tenants {
+  background: var(--ink);
+  padding: clamp(5rem, 10vw, 9rem) 2rem;
+}
+.tenants-head {
+  max-width: 1240px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+.tenants-head h2 {
+  color: var(--paper);
+  margin: 0 auto;
+}
+.tenants-badges {
+  max-width: 1240px;
+  margin: 0 auto 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.badge {
+  padding: 0.5rem 1.4rem;
+  font-family: var(--font-utility);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--slate);
+  border: 1px solid var(--ink-line);
+  border-radius: 100px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.35s var(--ease);
+}
+.badge:hover {
+  border-color: var(--brass);
+  color: var(--brass-soft);
+}
+.badge.active {
+  background: var(--brass);
+  border-color: var(--brass);
+  color: var(--ink);
+}
+.tenants-grid {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.tenant-card {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: default;
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease), max-height 0.5s var(--ease), margin 0.5s var(--ease), padding 0.5s var(--ease), visibility 0.5s;
+}
+.tenant-card.hidden {
+  display: none;
+}
+.tenant-card-inner {
+  position: relative;
+  aspect-ratio: 16/10;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.8rem 1.5rem;
+  overflow: hidden;
+}
+.tenant-card-inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(18,21,28,0.85) 100%);
+  z-index: 1;
+}
+.tenant-card-inner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  z-index: 0;
+}
+.tenant-card-grad {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.tenant-card-grad--dining {
+  background: linear-gradient(135deg, #1B2029 0%, #4A3528 100%);
+}
+.tenant-card-grad--shopping {
+  background: linear-gradient(135deg, #1B2029 0%, #1A3A3A 100%);
+}
+.tenant-card-grad--wellness {
+  background: linear-gradient(135deg, #1B2029 0%, #1A2E22 100%);
+}
+.tenant-card-grad--entertainment {
+  background: linear-gradient(135deg, #1B2029 0%, #2E1A3A 100%);
+}
+.tenant-card-content {
+  position: relative;
+  z-index: 2;
+}
+.tenant-category {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-utility);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-bottom: 0.5rem;
+}
+.tenant-category svg {
+  width: 12px;
+  height: 12px;
+}
+.tenant-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--paper);
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 0.2rem;
+}
+.tenant-sub {
+  font-size: 0.82rem;
+  color: rgba(245,242,236,0.55);
+  line-height: 1.4;
+  max-width: 30ch;
+}
+.tenant-coming {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.2rem 0.6rem;
+  font-family: var(--font-utility);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brass);
+  border: 1px solid rgba(201,161,93,0.4);
+  border-radius: 100px;
+}
+
+/* ===================================================
    LOCATION
 =================================================== */
 .location {
@@ -1248,6 +1398,7 @@ h2 {
   .pricing-card { padding: 2.5rem 1.8rem; }
 
   .room-type-grid { grid-template-columns: repeat(2, 1fr); }
+  .tenants-grid { grid-template-columns: repeat(2, 1fr); }
   .modal { flex-direction: column; max-height: 90vh; }
   .modal-carousel { width: 100%; min-height: 280px; height: 40vh; }
   .modal-info { width: 100%; padding: 1.5rem 1.4rem; }
@@ -1302,10 +1453,12 @@ h2 {
   .hero-pricing-unit {
     font-size: 0.8rem;
   }
-  .about, .room-type, .units, .location, .cta { padding-left: 1.4rem; padding-right: 1.4rem; }
+  .about, .room-type, .tenants, .units, .location, .cta { padding-left: 1.4rem; padding-right: 1.4rem; }
   .facilities { padding-left: 1.4rem; padding-right: 1.4rem; }
   .facilities-grid { grid-template-columns: 1fr; }
   .room-type-grid { grid-template-columns: 1fr; }
+  .tenants-grid { grid-template-columns: 1fr; }
+  .tenant-card-inner { aspect-ratio: 16/9; padding: 1.4rem 1.2rem; }
   .modal-overlay { padding: 1rem; }
   .modal-carousel { min-height: 220px; height: 30vh; }
   .modal-info-stats { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }

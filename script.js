@@ -327,4 +327,87 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "ArrowRight" && modal.classList.contains("open")) goToSlide(currentSlide + 1);
   });
 
+  /* ---------- Tenant data ---------- */
+  const tenantData = [
+    { category: "dining", name: "Burma", sub: "Myanmar restaurant with authentic Southeast Asian cuisine" },
+    { category: "dining", name: "Gure", sub: "Artisan gelato & specialty coffee shop" },
+    { category: "dining", name: "Imperial Dimsum", sub: "Chinese restaurant specializing in premium dimsum" },
+    { category: "dining", name: "Murasaki", sub: "Authentic Japanese izakaya dining experience" },
+    { category: "dining", name: "Fog by Amalfi", sub: "Italian restaurant with Mediterranean flavour", comingSoon: true },
+    { category: "dining", name: "Enkaku by Shikaku", sub: "Yakitori place by the renowned Dharmawangsa institution", comingSoon: true },
+    { category: "shopping", name: "Kem Chicks", sub: "Premium supermarket with imported & gourmet selection" },
+    { category: "shopping", name: "Arden Grove by BRANZ Mega Kuningan", sub: "Luxury retail & lifestyle destination" },
+    { category: "wellness", name: "Annathaya Spa", sub: "Full-service spa & relaxation sanctuary" },
+    { category: "wellness", name: "Rogue & Beyond", sub: "Premium barber shop & grooming lounge" },
+    { category: "entertainment", name: "Virtual Golf Simulator", sub: "In-door golf simulator with cutting edge VR technology" },
+    { category: "entertainment", name: "Enjyu Nojo", sub: "Premium Wagyu A5 Japanese barbeque experience" },
+  ];
+
+  const categoryIcons = {
+    dining: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 3v12a4 4 0 008 0V3M14 3v12a4 4 0 008 0V3M2 21h20"/></svg>`,
+    shopping: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>`,
+    wellness: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`,
+    entertainment: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+  };
+
+  const categories = [
+    { id: "all", label: "All" },
+    { id: "dining", label: "Dining" },
+    { id: "shopping", label: "Shopping" },
+    { id: "wellness", label: "Wellness" },
+    { id: "entertainment", label: "Entertainment" },
+  ];
+
+  const badgeContainer = document.getElementById("tenantBadges");
+  const gridContainer = document.getElementById("tenantGrid");
+
+  /* ---------- Generate badges ---------- */
+  let activeBadge = "all";
+
+  categories.forEach((cat, i) => {
+    const badge = document.createElement("button");
+    badge.className = `badge${cat.id === "all" ? " active" : ""} reveal-up`;
+    badge.style.transitionDelay = `${i * 0.06}s`;
+    badge.textContent = cat.label;
+    badge.dataset.category = cat.id;
+    badge.addEventListener("click", () => filterTenants(cat.id));
+    badgeContainer.appendChild(badge);
+    io.observe(badge);
+  });
+
+  /* ---------- Generate cards ---------- */
+  tenantData.forEach((tenant, i) => {
+    const card = document.createElement("div");
+    card.className = "tenant-card reveal-up";
+    card.style.transitionDelay = `${i * 0.06}s`;
+    card.dataset.category = tenant.category;
+    card.innerHTML = `
+      <div class="tenant-card-inner">
+        <div class="tenant-card-grad tenant-card-grad--${tenant.category}"></div>
+        <div class="tenant-card-content">
+          <p class="tenant-category">${categoryIcons[tenant.category]} ${tenant.category}</p>
+          <h3 class="tenant-name">${tenant.name}</h3>
+          <p class="tenant-sub">${tenant.sub}</p>
+          ${tenant.comingSoon ? '<span class="tenant-coming">Coming Soon</span>' : ""}
+        </div>
+      </div>
+    `;
+    gridContainer.appendChild(card);
+    io.observe(card);
+  });
+
+  /* ---------- Filter ---------- */
+  function filterTenants(category) {
+    if (category === activeBadge) return;
+    activeBadge = category;
+
+    document.querySelectorAll(".badge").forEach((b) => {
+      b.classList.toggle("active", b.dataset.category === category);
+    });
+
+    document.querySelectorAll(".tenant-card").forEach((card) => {
+      const match = category === "all" || card.dataset.category === category;
+      card.classList.toggle("hidden", !match);
+    });
+  }
 });
