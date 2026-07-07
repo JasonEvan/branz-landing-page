@@ -62,6 +62,7 @@
           <a href="#about">About</a>
           <a href="#facilities">Facilities</a>
           <a href="#units">Unit Types</a>
+          <a href="#room-type">Room Type</a>
           <a href="#location">Location</a>
         </div>
         <a href="#contact" class="nav-cta">Contact Us</a>
@@ -78,6 +79,7 @@
         <a href="#about">About</a>
         <a href="#facilities">Facilities</a>
         <a href="#units">Unit Types</a>
+        <a href="#room-type">Room Type</a>
         <a href="#location">Location</a>
         <a href="#contact" class="nav-mobile-cta">Contact Us</a>
       </div>
@@ -421,6 +423,15 @@
         </div>
       </section>
 
+      <!-- ROOM TYPE -->
+      <section class="room-type" id="room-type">
+        <div class="room-type-head">
+          <p class="section-eyebrow reveal-up">Room Type</p>
+          <h2 class="reveal-up">Choose the space that fits your life.</h2>
+        </div>
+        <div class="room-type-grid" id="roomTypeGrid"></div>
+      </section>
+
       <!-- LOCATION -->
       <section class="location" id="location">
         <div class="location-grid">
@@ -537,6 +548,27 @@
         </p>
       </div>
     </footer>
+
+    <!-- ROOM TYPE MODAL -->
+    <div class="modal-overlay" id="roomModal">
+      <div class="modal">
+        <button class="modal-close" id="modalClose" aria-label="Close modal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <div class="modal-carousel" id="modalCarousel">
+          <div class="modal-carousel-track" id="modalTrack"></div>
+          <button class="modal-arrow modal-arrow--prev" id="modalPrev" aria-label="Previous image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <button class="modal-arrow modal-arrow--next" id="modalNext" aria-label="Next image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <div class="modal-counter" id="modalCounter"></div>
+          <div class="modal-dots" id="modalDots"></div>
+        </div>
+        <div class="modal-info" id="modalInfo"></div>
+      </div>
+    </div>
 
     <a
       href="https://wa.me/6281290246038"
