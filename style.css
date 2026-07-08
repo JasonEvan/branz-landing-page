@@ -1252,6 +1252,104 @@ h2 {
 }
 
 /* ===================================================
+   ARTICLES
+=================================================== */
+.articles {
+  padding: clamp(5rem, 10vw, 9rem) 2rem;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.articles-head { margin-bottom: 3.5rem; max-width: 640px; }
+.articles-sub { color: var(--slate); margin-top: 1rem; }
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.article-card {
+  position: relative;
+  background: var(--white);
+  border-radius: 3px;
+  overflow: hidden;
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+}
+.article-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.1);
+}
+.article-card-thumb {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: var(--paper-dim);
+}
+.article-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease);
+}
+.article-card:hover .article-card-thumb img {
+  transform: scale(1.06);
+}
+.article-card-body {
+  padding: 1.4rem 1.4rem 1.6rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.article-card-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 0;
+}
+.article-card-actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+.article-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.6rem 0.8rem;
+  font-family: var(--font-utility);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--brass);
+  border: 1px solid var(--brass);
+  border-radius: 2px;
+  background: transparent;
+  transition: all 0.35s var(--ease);
+  text-align: center;
+  white-space: nowrap;
+}
+.article-btn:hover {
+  background: var(--brass);
+  color: var(--ink);
+}
+.article-btn svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* ===================================================
    LOCATION
 =================================================== */
 .location {
@@ -1441,6 +1539,7 @@ h2 {
   .pricing-card { padding: 2.5rem 1.8rem; }
 
   .room-type-grid { grid-template-columns: repeat(2, 1fr); }
+  .articles-grid { grid-template-columns: repeat(2, 1fr); }
   .tenants-grid { grid-template-columns: repeat(2, 1fr); }
   .modal { flex-direction: column; max-height: 90vh; }
   .modal-carousel { width: 100%; min-height: 280px; height: 40vh; }
@@ -1500,6 +1599,7 @@ h2 {
   .facilities { padding-left: 1.4rem; padding-right: 1.4rem; }
   .facilities-grid { grid-template-columns: 1fr; }
   .room-type-grid { grid-template-columns: 1fr; }
+  .articles-grid { grid-template-columns: 1fr; }
   .tenants-grid { grid-template-columns: 1fr; }
   .tenant-card-inner { aspect-ratio: 16/9; padding: 1.4rem 1.2rem; }
   .modal-overlay { padding: 1rem; }

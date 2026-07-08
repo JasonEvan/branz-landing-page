@@ -1,0 +1,221 @@
+/* ===================================================
+   BRANZ MEGA KUNINGAN — Article Page Styles
+   Uses the same design tokens as the main site.
+   =================================================== */
+
+/* ---------- Article page layout ---------- */
+.article-page {
+  background: var(--paper);
+  min-height: 100vh;
+}
+
+/* ---------- Navigation override ---------- */
+.article-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.3rem 0;
+  background: rgba(18,21,28,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+.article-nav-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.article-nav-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-utility);
+  font-size: 0.9rem;
+  color: var(--paper);
+  transition: color 0.3s;
+}
+.article-nav-back:hover {
+  color: var(--brass);
+}
+.article-nav-back svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s var(--ease);
+}
+.article-nav-back:hover svg {
+  transform: translateX(-3px);
+}
+.article-nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--paper);
+  letter-spacing: 0.02em;
+}
+.article-nav-logo span {
+  color: var(--brass);
+}
+
+/* ---------- Article hero ---------- */
+.article-hero {
+  position: relative;
+  height: 55vh;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--ink);
+  margin-top: 68px;
+}
+.article-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.article-hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(18,21,28,0.3) 0%, rgba(18,21,28,0.1) 40%, rgba(18,21,28,0.85) 100%);
+  z-index: 1;
+}
+.article-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
+}
+.article-hero-label {
+  font-family: var(--font-utility);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-bottom: 0.8rem;
+  display: block;
+}
+.article-hero h1 {
+  color: var(--paper);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  max-width: 16ch;
+  line-height: 1.2;
+}
+
+/* ---------- Article body ---------- */
+.article-main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.8rem 2rem 5rem;
+}
+.article-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--paper-dim);
+}
+.article-lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.2rem;
+  font-family: var(--font-utility);
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  color: var(--brass);
+  border: 1px solid var(--brass);
+  border-radius: 100px;
+  background: transparent;
+  transition: all 0.35s var(--ease);
+}
+.article-lang-toggle:hover {
+  background: var(--brass);
+  color: var(--ink);
+}
+.article-lang-toggle svg {
+  width: 16px;
+  height: 16px;
+}
+.article-body {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+.article-body p {
+  margin-bottom: 1.5rem;
+}
+.article-body strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ---------- Article footer / back ---------- */
+.article-footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+  text-align: center;
+}
+.article-footer-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--brass);
+  margin: 0 auto 2rem;
+  opacity: 0.4;
+}
+.article-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-utility);
+  font-size: 0.9rem;
+  color: var(--slate);
+  transition: color 0.3s;
+}
+.article-back-link:hover {
+  color: var(--brass);
+}
+.article-back-link svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s var(--ease);
+}
+.article-back-link:hover svg {
+  transform: translateX(-4px);
+}
+
+/* ---------- Image credit / caption ---------- */
+.article-hero-credit {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  z-index: 2;
+  font-family: var(--font-utility);
+  font-size: 0.7rem;
+  color: rgba(245,242,236,0.5);
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .article-nav-inner { padding: 0 1.4rem; }
+  .article-hero { height: 45vh; min-height: 300px; margin-top: 62px; }
+  .article-hero-content { padding: 1.4rem; }
+  .article-main { padding: 2rem 1.4rem 3rem; }
+  .article-footer { padding: 0 1.4rem 3rem; }
+  .article-hero-credit { right: 1.4rem; }
+}
+
+@media (max-width: 560px) {
+  .article-hero { height: 40vh; min-height: 260px; }
+  .article-hero h1 { font-size: 1.5rem; }
+  .article-toolbar { flex-direction: column; gap: 1rem; align-items: flex-start; }
+  .article-body { font-size: 0.98rem; }
+}

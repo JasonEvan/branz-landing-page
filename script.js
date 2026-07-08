@@ -495,4 +495,75 @@ document.addEventListener("DOMContentLoaded", () => {
       card.classList.toggle("hidden", !match);
     });
   }
+
+  /* ---------- Article data ---------- */
+  const articleData = [
+    {
+      id: 1,
+      image: "assets/img/article/Artikel 1.png",
+      title: {
+        en: "Branz Mega Kuningan: A New Standard of Urban Living in South Jakarta",
+        ja: "ブランズ・メガ・クニンガン：南ジャカルタが誇る都市生活の新たな基準",
+      },
+    },
+    {
+      id: 2,
+      image: "assets/img/article/Artikel 2.png",
+      title: {
+        en: "Exploring the Mega Kuningan Neighborhood: A Guide for Residents and Investors",
+        ja: "メガ・クニンガンエリアガイド：居住者と投資家のための完全ガイド",
+      },
+    },
+    {
+      id: 3,
+      image: "assets/img/article/Artikel 3.png",
+      title: {
+        en: "Japanese Craftsmanship Meets Indonesian Hospitality: The Story Behind Branz",
+        ja: "日本の匠の技とインドネシアのおもてなしの融合：ブランズに込められた物語",
+      },
+    },
+    {
+      id: 4,
+      image: "assets/img/article/Artikel 4.png",
+      title: {
+        en: "A Guide to Apartment Investment in Jakarta: Why Location Matters More Than Ever",
+        ja: "ジャカルタのアパートメント投資ガイド：ロケーションがこれまで以上に重要な理由",
+      },
+    },
+    {
+      id: 5,
+      image: "assets/img/article/Artikel 5.png",
+      title: {
+        en: "Five Questions to Ask Before Choosing Your Next Apartment in Jakarta",
+        ja: "ジャカルタで次のアパートメントを選ぶ前に確認すべき5つの質問",
+      },
+    },
+  ];
+
+  /* ---------- Generate article cards ---------- */
+  const articlesGrid = document.getElementById("articlesGrid");
+  if (articlesGrid) {
+    articleData.forEach((article, i) => {
+      const card = document.createElement("div");
+      card.className = "article-card reveal-up";
+      card.style.transitionDelay = `${i * 0.09}s`;
+
+      const iconGlobe = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 1 0 10 10M12 2a10 10 0 0 0-10 10M12 2c1.7 0 3.3 4 3.3 10S13.7 22 12 22M12 2c-1.7 0-3.3 4-3.3 10S10.3 22 12 22M2 12h20"/></svg>`;
+
+      card.innerHTML = `
+        <div class="article-card-thumb">
+          <img src="${article.image}" alt="${article.title.en}" loading="lazy" />
+        </div>
+        <div class="article-card-body">
+          <h3 class="article-card-title">${article.title.en}</h3>
+          <div class="article-card-actions">
+            <a href="articles/article-en-${article.id}.html" class="article-btn">${iconGlobe} English</a>
+            <a href="articles/article-ja-${article.id}.html" class="article-btn">${iconGlobe} 日本語</a>
+          </div>
+        </div>
+      `;
+      articlesGrid.appendChild(card);
+      io.observe(card);
+    });
+  }
 });
