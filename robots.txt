@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://branzmegakuningan.com/sitemap.xml
+Sitemap: https://www.branzkuninganjakarta.com/sitemap.xml
