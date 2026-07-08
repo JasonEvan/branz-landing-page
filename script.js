@@ -502,8 +502,8 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 1,
       image: "assets/img/article/Artikel 1.png",
       title: {
-        en: "Branz Mega Kuningan: A New Standard of Urban Living in South Jakarta",
-        ja: "ブランズ・メガ・クニンガン：南ジャカルタが誇る都市生活の新たな基準",
+        en: "Why Japanese Expats Choose BRANZ Mega Kuningan",
+        ja: "ジャカルタで働く日本人駐在員がBRANZ Mega Kuninganを選ぶ理由",
       },
     },
     {

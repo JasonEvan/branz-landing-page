@@ -7,51 +7,30 @@ const articleData = [
     id: 1,
     image: "../assets/img/article/Artikel 1.png",
     titles: {
-      en: "Branz Mega Kuningan: A New Standard of Urban Living in South Jakarta",
-      ja: "ブランズ・メガ・クニンガン：南ジャカルタが誇る都市生活の新たな基準",
+      en: "Why Japanese Expats Choose BRANZ Mega Kuningan",
+      ja: "ジャカルタで働く日本人駐在員がBRANZ Mega Kuninganを選ぶ理由",
     },
     descriptions: {
-      en: "Discover Branz Mega Kuningan, a premium apartment development by Tokyu Land Indonesia in the heart of South Jakarta's CBD.",
-      ja: "ブランズ・メガ・クニンガンは、東急ランド・インドネシアが手掛ける南ジャカルタCBDのプレミアムレジデンスです。",
+      en: "Why Japanese expats choose BRANZ Mega Kuningan for its prime location, Japanese-inspired quality, and premium lifestyle in South Jakarta.",
+      ja: "ジャカルタで暮らす日本人駐在員にとって、BRANZ Mega Kuninganは、優れた立地と日本品質を取り入れた住環境を兼ね備えた魅力的なレジデンスです。",
     },
     contents: {
       en: `
-        <p>
-          Branz Mega Kuningan represents a new chapter in urban living, where thoughtful design meets prime location
-          in the heart of South Jakarta's most prestigious business district. Developed by Tokyu Land Indonesia,
-          this premium residence offers a lifestyle that balances productivity, comfort, and connectivity.
-        </p>
-        <p>
-          Every detail of Branz has been crafted with the modern urbanite in mind. From the moment you step into the
-          grand lobby, you are welcomed by an atmosphere of refined elegance — a space that feels both grand and intimate.
-        </p>
-        <p>
-          Residents enjoy direct access to Mega Kuningan's ecosystem of corporate headquarters, world-class dining,
-          and upscale shopping destinations. Whether you are a young professional seeking efficiency or a family
-          looking for a secure and vibrant community, Branz adapts to your rhythm.
-        </p>
-        <p>
-          The building features a range of amenities designed to enrich daily life: an infinity pool overlooking
-          the Jakarta skyline, a fully equipped fitness center, lush communal gardens, and 24-hour concierge
-          service. Every corner of Branz speaks to a commitment to quality and a deep understanding of what
-          city dwellers truly need.
-        </p>
+        <p>Relocating to a new country means finding more than just a place to live—it means finding a home that offers comfort, convenience, and peace of mind. For many Japanese expatriates in Jakarta, BRANZ Mega Kuningan is an attractive residential choice thanks to its prime location, Japanese-inspired quality, and premium lifestyle.</p>
+        <p>Situated in the heart of Mega Kuningan, one of Jakarta's leading business districts, BRANZ provides easy access to multinational companies, embassies, luxury hotels, and popular shopping destinations. Its strategic location helps professionals reduce commuting time while staying connected to the city's business and lifestyle hubs, including Sudirman and SCBD.</p>
+        <p>Developed by Tokyu Land Indonesia, BRANZ reflects the attention to detail and quality often associated with Japanese residential developments. The thoughtfully designed layouts, elegant interiors, and well-maintained facilities create a comfortable environment for both individuals and families.</p>
+        <p>Residents can enjoy a wide range of amenities, including a swimming pool, fitness center, sauna, landscaped gardens, residents' lounge, and 24-hour security. These facilities are designed to support a balanced lifestyle, allowing residents to relax and recharge without leaving the property.</p>
+        <p>The surrounding neighborhood also offers everything needed for daily life. From international restaurants and cafés to supermarkets, healthcare facilities, and entertainment venues, residents can enjoy the convenience of having essential services just minutes away. For Japanese expatriates, the area is also home to several authentic Japanese restaurants and businesses, making the transition to life in Jakarta even more comfortable.</p>
+        <p>Choosing the right apartment is an important decision for anyone relocating overseas. With its excellent location, quality development, and premium facilities, BRANZ Mega Kuningan offers a living experience that combines comfort, convenience, and modern urban living in one of Jakarta's most prestigious neighborhoods.</p>
+        <p>Whether you are moving to Jakarta for work or looking for a luxury residence in the city, BRANZ Mega Kuningan provides a welcoming environment designed to support your lifestyle from the very first day.</p>
       `,
       ja: `
-        <p>
-          ブランズ・メガ・クニンガンは、南ジャカルタで最も権威のあるビジネス地区の中心に位置し、洗練されたデザインと
-          最高のロケーションが融合した都市生活の新しい章を象徴しています。東急ランド・インドネシアが手掛ける
-          このプレミアムレジデンスは、生産性、快適性、そして利便性のバランスが取れたライフスタイルを提供します。
-        </p>
-        <p>
-          ブランズの細部にわたるこだわりは、現代の都市居住者のために丹念に設計されています。グランドロビーに
-          足を踏み入れた瞬間から、洗練された優雅さの雰囲気に包まれます——壮大でありながらも親密な空間です。
-        </p>
-        <p>
-          居住者は、メガ・クニンガンの企業本社、ワールドクラスのダイニング、高級ショッピングが集まる
-          エコシステムに直接アクセスできます。効率性を求める若いプロフェッショナルも、安全で活気ある
-          コミュニティを探す家族も、ブランズはそれぞれの生活リズムに寄り添います。
-        </p>
+        <p>海外での生活を始める際、住まい選びは非常に重要です。快適さや利便性はもちろん、安心して暮らせる環境も欠かせません。ジャカルタで暮らす多くの日本人駐在員にとって、BRANZ Mega Kuninganは、優れた立地と日本品質を取り入れた住環境を兼ね備えた魅力的なレジデンスです。</p>
+        <p>BRANZ Mega Kuninganは、ジャカルタを代表するビジネスエリア「メガ・クニンガン」の中心に位置しています。周辺には多国籍企業のオフィス、大使館、高級ホテル、ショッピングモールなどが集まり、スディルマンやSCBDへのアクセスも良好です。通勤時間を短縮できるだけでなく、仕事とプライベートの両立を実現しやすいロケーションです。</p>
+        <p>東急不動産インドネシアが開発したBRANZは、日本ならではの品質へのこだわりを取り入れています。洗練されたデザイン、機能的な間取り、そして細部まで配慮された設計により、単身者からファミリーまで快適に暮らせる住空間を提供しています。</p>
+        <p>館内には、プール、フィットネスジム、サウナ、緑豊かなガーデン、ラウンジなどの充実した共用施設を備えています。また、24時間体制のセキュリティと管理サービスにより、日々安心して生活できる環境が整っています。</p>
+        <p>周辺にはスーパーマーケット、レストラン、カフェ、医療施設など、日常生活に必要な施設が充実しています。さらに、日本食レストランや日本人にも馴染みのあるサービスも多く、初めてジャカルタで生活する方でも安心して新しい生活を始めることができます。</p>
+        <p>ジャカルタで上質な住まいをお探しの方にとって、BRANZ Mega Kuninganは、優れた立地、快適な住環境、そして日本品質の安心感を兼ね備えた理想的な選択肢です。ビジネスでもプライベートでも、充実した毎日をサポートする住まいとして、多くの方に選ばれています。</p>
       `,
     },
   },
