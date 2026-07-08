@@ -518,8 +518,8 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 3,
       image: "assets/img/article/Artikel 3.png",
       title: {
-        en: "Japanese Craftsmanship Meets Indonesian Hospitality: The Story Behind Branz",
-        ja: "日本の匠の技とインドネシアのおもてなしの融合：ブランズに込められた物語",
+        en: "Japanese Quality Living in the Heart of Jakarta",
+        ja: "ジャカルタの中心で叶える、日本品質の上質な暮らし",
       },
     },
     {
