@@ -136,75 +136,98 @@ const articleData = [
     id: 5,
     image: "../assets/img/article/Artikel 5.png",
     titles: {
-      en: "Five Questions to Ask Before Choosing Your Next Apartment in Jakarta",
-      ja: "ジャカルタで次のアパートメントを選ぶ前に確認すべき5つの質問",
+      en: "Why BRANZ Mega Kuningan Is a Smart Investment Opportunity",
+      ja: "BRANZ Mega Kuninganが魅力的な投資先である理由",
     },
     descriptions: {
-      en: "Essential questions every apartment seeker in Jakarta should ask before making a decision.",
-      ja: "ジャカルタでアパートメントを探すすべての人が決断前に確認すべき重要な質問。",
+      en: "Discover why BRANZ Mega Kuningan is a smart investment opportunity — prime Mega Kuningan location, Japanese quality by Tokyu Land Indonesia, premium facilities, and strong rental demand.",
+      ja: "BRANZ Mega Kuninganがジャカルタで魅力的な投資先である理由を徹底解説。好立地・日本品質・充実設備・安定した賃貸需要。",
     },
     contents: {
       en: `
         <p>
-          Choosing the right apartment in Jakarta can feel overwhelming. With dozens of developments across
-          the city, each promising a unique lifestyle, how do you separate genuine quality from marketing?
-          Here are five essential questions to guide your decision.
+          Jakarta remains one of Southeast Asia's most dynamic business capitals, attracting
+          multinational companies, expatriates, and professionals from around the world. As demand for
+          premium residences continues to grow, properties in established business districts have
+          become increasingly attractive to both homeowners and investors. Among these, BRANZ Mega
+          Kuningan stands out as a premium development offering long-term investment potential.
         </p>
         <p>
-          <strong>1. Who is the developer?</strong> A trusted developer with a proven track record is your
-          first indicator of quality. Tokyu Land Indonesia brings decades of experience and Japanese
-          standards of excellence to every project.
+          Located in the prestigious Mega Kuningan district, BRANZ enjoys a strategic position
+          surrounded by international offices, embassies, luxury hotels, and commercial centers. This
+          prime location has consistently attracted professionals and expatriates seeking high-quality
+          accommodation, helping to support stable demand for premium residential properties.
         </p>
         <p>
-          <strong>2. What is the construction quality?</strong> Look beyond the finishes to the structural
-          integrity. Branz was built by Shimizu Corporation, ensuring earthquake-resistant construction
-          and premium materials throughout.
+          Developed by Tokyu Land Indonesia, BRANZ is recognized for its commitment to quality
+          construction, thoughtful design, and professional property management. These qualities not
+          only provide a comfortable living environment but also contribute to the property's long-term
+          value and appeal in Jakarta's luxury residential market.
         </p>
         <p>
-          <strong>3. How is the location?</strong> Consider not just the address but the walkability,
-          traffic access, and proximity to daily necessities. Mega Kuningan offers an unmatched
-          combination of business access and lifestyle amenities.
+          Beyond its location and quality, BRANZ offers a comprehensive range of facilities, including a
+          swimming pool, fitness center, sauna, landscaped gardens, residents' lounge, and 24-hour security.
+          These premium amenities enhance the overall living experience and increase the
+          property's attractiveness to potential tenants and future buyers.
         </p>
         <p>
-          <strong>4. What amenities matter to you?</strong> Pool, gym, security, concierge — prioritize
-          what you will actually use. Branz's amenities are designed for real daily living, not just
-          showroom appeal.
+          For investors, one of the key advantages of BRANZ Mega Kuningan is its appeal to expatriates
+          and corporate professionals. The surrounding business district is home to numerous
+          multinational companies, creating a steady demand for high-quality rental properties. This
+          strong tenant profile makes BRANZ an attractive option for those seeking long-term rental
+          opportunities.
         </p>
         <p>
-          <strong>5. What is the long-term value?</strong> Consider resale potential, rental demand,
-          and management quality. A well-located, well-built apartment in a managed development
-          holds its value better over time.
+          As Jakarta continues to develop as a regional business hub, well-located luxury residences are
+          expected to remain in demand. Properties that combine an excellent location, trusted developer,
+          premium facilities, and quality management are often well positioned to maintain their appeal
+          over time.
+        </p>
+        <p>
+          Whether you are looking for a home or exploring investment opportunities in Jakarta's luxury
+          property market, BRANZ Mega Kuningan offers a compelling combination of quality,
+          convenience, and long-term potential in one of the city's most prestigious addresses.
         </p>
       `,
       ja: `
         <p>
-          ジャカルタで適切なアパートメントを選ぶことは、時に圧倒されるかもしれません。市内には数多くの
-          物件があり、それぞれが独自のライフスタイルを約束しています。本物の品質とマーケティングを
-          どのように見分ければよいのでしょうか？ここでは、決断の指針となる5つの重要な質問を紹介します。
+          ジャカルタは、東南アジアを代表するビジネス都市の一つとして、多くの多国籍企業や海外駐
+          在員、ビジネスパーソンが集まる国際都市です。こうした成長を背景に、ビジネスエリアに位
+          置する高品質なレジデンスへの需要は年々高まっており、不動産投資先としても大きな注目を
+          集めています。その中でも、BRANZ Mega Kuninganは、優れた立地と日本品質を兼ね備えた
+          プレミアムレジデンスとして、高い投資価値が期待されています。
         </p>
         <p>
-          <strong>1. デベロッパーは誰ですか？</strong>実績のある信頼できるデベロッパーは、品質の
-          最初の指標です。東急ランド・インドネシアは、数十年の経験と日本の卓越した基準を
-          すべてのプロジェクトに反映しています。
+          BRANZ Mega Kuninganは、ジャカルタ屈指のビジネス街であるメガ・クニンガン地区の中心に位
+          置しています。周辺には多国籍企業、大使館、高級ホテル、商業施設が集まり、多くの海外駐
+          在員やエグゼクティブが居住エリアとして選ぶ人気のロケーションです。そのため、質の高い
+          賃貸住宅への需要が安定しており、長期的な資産価値にも期待が持てます。
         </p>
         <p>
-          <strong>2. 建設品質はどうですか？</strong>内装仕上げだけでなく、構造的な強度にも注目してください。
-          ブランズは清水建設によって建設され、耐震構造とプレミアム素材が全体に使用されています。
+          東急不動産インドネシアが開発するBRANZは、日本ならではの品質へのこだわりと、洗練され
+          たデザイン、優れた管理体制で知られています。高品質な建物と充実した管理サービスは、快
+          適な住環境を提供するだけでなく、不動産としての価値を長期的に維持する重要な要素となっ
+          ています。
         </p>
         <p>
-          <strong>3. ロケーションはどうですか？</strong>住所だけでなく、徒歩圏内の施設、交通アクセス、
-          日用品への近接性を考慮してください。メガ・クニンガンは、ビジネスアクセスとライフスタイル施設の
-          比類のない組み合わせを提供します。
+          また、プール、フィットネスジム、サウナ、ガーデン、レジデントラウンジ、24時間体制のセ
+          キュリティなど、充実した共用施設もBRANZの大きな魅力です。これらの設備は居住者の満足
+          度を高めるだけでなく、賃貸市場においても高い競争力につながります。
         </p>
         <p>
-          <strong>4. どのアメニティがあなたにとって重要ですか？</strong>プール、ジム、セキュリティ、
-          コンシェルジュ——実際に使用するものを優先してください。ブランズのアメニティは、ショールーム的な
-          魅力だけでなく、実際の日常生活のために設計されています。
+          投資家にとって、BRANZ Mega Kuninganの大きな魅力の一つは、海外駐在員や企業役員を中
+          心とした安定した賃貸需要です。メガ・クニンガン周辺には数多くの外資系企業が集まってお
+          り、質の高い住まいを求める入居希望者が継続的に存在しています。そのため、長期的な賃貸
+          運用を検討する方にとっても魅力的な選択肢となっています。
         </p>
         <p>
-          <strong>5. 長期的な価値はどうですか？</strong>再販可能性、賃貸需要、管理品質を考慮してください。
-          適切なロケーションに建てられた、適切に管理されたアパートメントは、時間の経過とともに
-          その価値をよりよく維持します。
+          ジャカルタが今後も国際的なビジネス拠点として発展を続ける中、優れた立地・信頼あるデベ
+          ロッパー・高品質な住環境を兼ね備えたレジデンスは、今後も高い需要が期待されます。
+        </p>
+        <p>
+          ご自身の住まいとしてはもちろん、長期的な資産形成を目的とした不動産投資先としても
+          、BRANZ Mega Kuninganは、品質・利便性・将来性を兼ね備えた魅力的なプレミアムレジデ
+          ンスです。
         </p>
       `,
     },

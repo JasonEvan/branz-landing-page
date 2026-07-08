@@ -534,8 +534,8 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 5,
       image: "assets/img/article/Artikel 5.png",
       title: {
-        en: "Five Questions to Ask Before Choosing Your Next Apartment in Jakarta",
-        ja: "ジャカルタで次のアパートメントを選ぶ前に確認すべき5つの質問",
+        en: "Why BRANZ Mega Kuningan Is a Smart Investment Opportunity",
+        ja: "BRANZ Mega Kuninganが魅力的な投資先である理由",
       },
     },
   ];
