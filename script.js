@@ -354,21 +354,25 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "dining",
       name: "Burma",
       sub: "Myanmar restaurant with authentic Southeast Asian cuisine",
+      image: "burma.avif",
     },
     {
       category: "dining",
       name: "Gure",
       sub: "Artisan gelato & specialty coffee shop",
+      image: "gure.avif",
     },
     {
       category: "dining",
       name: "Imperial Dimsum",
       sub: "Chinese restaurant specializing in premium dimsum",
+      image: "imperial-kitchen.avif",
     },
     {
       category: "dining",
       name: "Murasaki",
       sub: "Authentic Japanese izakaya dining experience",
+      image: "murasaki.avif",
     },
     {
       category: "dining",
@@ -386,31 +390,37 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "shopping",
       name: "Kem Chicks",
       sub: "Premium supermarket with imported & gourmet selection",
+      image: "kemchicks.avif",
     },
     {
       category: "shopping",
       name: "Arden Grove by BRANZ Mega Kuningan",
       sub: "Luxury retail & lifestyle destination",
+      image: "arden.avif",
     },
     {
       category: "wellness",
       name: "Annathaya Spa",
       sub: "Full-service spa & relaxation sanctuary",
+      image: "annathaya.avif",
     },
     {
       category: "wellness",
       name: "Rogue & Beyond",
       sub: "Premium barber shop & grooming lounge",
+      image: "rogue-and-beyond.avif",
     },
     {
       category: "entertainment",
       name: "Virtual Golf Simulator",
       sub: "In-door golf simulator with cutting edge VR technology",
+      image: "golf-simulator.avif",
     },
     {
       category: "entertainment",
       name: "Enjyu Nojo",
       sub: "Premium Wagyu A5 Japanese barbeque experience",
+      image: "enjyu-nojo.avif",
     },
   ];
 
@@ -452,9 +462,13 @@ document.addEventListener("DOMContentLoaded", () => {
     card.className = "tenant-card reveal-up";
     card.style.transitionDelay = `${i * 0.06}s`;
     card.dataset.category = tenant.category;
+    const bgEl = tenant.image
+      ? `<img class="tenant-card-bg" src="assets/img/tenants/${tenant.image}" alt="${tenant.name}" loading="lazy" />`
+      : `<div class="tenant-card-grad tenant-card-grad--${tenant.category}"></div>`;
+
     card.innerHTML = `
       <div class="tenant-card-inner">
-        <div class="tenant-card-grad tenant-card-grad--${tenant.category}"></div>
+        ${bgEl}
         <div class="tenant-card-content">
           <p class="tenant-category">${categoryIcons[tenant.category]} ${tenant.category}</p>
           <h3 class="tenant-name">${tenant.name}</h3>
