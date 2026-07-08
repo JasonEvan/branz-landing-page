@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
       id: "1-bedroom-1-b",
       name: "1 Bedroom + 1 (B)",
       folder: "1_Bedroom_+_1_(B)",
-      price: "IDR 2 Billion",
+      price: "IDR 3,5 Billion",
       bedrooms: 1,
       bathrooms: 1,
       area: "61 m²",
