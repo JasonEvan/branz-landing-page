@@ -526,8 +526,8 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 4,
       image: "assets/img/article/Artikel 4.png",
       title: {
-        en: "A Guide to Apartment Investment in Jakarta: Why Location Matters More Than Ever",
-        ja: "ジャカルタのアパートメント投資ガイド：ロケーションがこれまで以上に重要な理由",
+        en: "Living in Jakarta: Why Mega Kuningan Is Perfect for Professionals",
+        ja: "ジャカルタで暮らすなら、なぜメガ・クニンガンがビジネスパーソンに最適なのか",
       },
     },
     {

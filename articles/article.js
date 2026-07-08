@@ -102,54 +102,33 @@ const articleData = [
     id: 4,
     image: "../assets/img/article/Artikel 4.png",
     titles: {
-      en: "A Guide to Apartment Investment in Jakarta: Why Location Matters More Than Ever",
-      ja: "ジャカルタのアパートメント投資ガイド：ロケーションがこれまで以上に重要な理由",
+      en: "Living in Jakarta: Why Mega Kuningan Is Perfect for Professionals",
+      ja: "ジャカルタで暮らすなら、なぜメガ・クニンガンがビジネスパーソンに最適なのか",
     },
     descriptions: {
-      en: "Key factors to consider when investing in Jakarta's apartment market, with insights on the Kuningan area.",
-      ja: "ジャカルタのアパート市場に投資する際の重要な考慮事項と、クニンガンエリアの魅力について解説します。",
+      en: "For professionals living and working in Jakarta, Mega Kuningan offers excellent connectivity, premium amenities, and a vibrant international community.",
+      ja: "ジャカルタで働くビジネスパーソンにとって、メガ・クニンガンはビジネスと暮らしの利便性を兼ね備えた人気のエリアです。優れたアクセス環境と充実した生活施設が快適な都市生活を実現します。",
     },
     contents: {
       en: `
-        <p>
-          Jakarta's property market has long been a cornerstone of Indonesia's economy, and apartment investment
-          continues to offer compelling opportunities for both local and international buyers. However, in an
-          increasingly discerning market, one factor has become more critical than ever: location.
-        </p>
-        <p>
-          Mega Kuningan stands out as one of Jakarta's most resilient property sub-markets. Its status as a
-          premier business district means consistent demand from corporate tenants, expatriates, and
-          high-net-worth individuals seeking a strategic base in the capital.
-        </p>
-        <p>
-          When evaluating an apartment investment, several factors deserve close attention: proximity to
-          business centers, quality of construction, building management, and access to lifestyle amenities.
-          Branz scores highly on all fronts, with its direct connectivity to the Kuningan business ecosystem,
-          Japanese-grade construction, and comprehensive facilities.
-        </p>
-        <p>
-          For investors, the appeal of Branz is clear: a limited supply of premium units in a high-demand
-          location, built to international standards by a trusted developer. As Jakarta continues to grow,
-          properties in prime locations like Mega Kuningan are well-positioned for long-term value appreciation.
-        </p>
+        <p>Choosing the right neighborhood is just as important as choosing the right home. For professionals living and working in Jakarta, Mega Kuningan has become one of the city's most desirable business and residential districts. Combining excellent connectivity, premium amenities, and a vibrant international community, it offers an ideal environment for a modern urban lifestyle.</p>
+        <p>Strategically located in the heart of South Jakarta, Mega Kuningan is home to multinational corporations, embassies, financial institutions, luxury hotels, and international business centers. Its central location provides convenient access to Jakarta's key commercial areas, including Sudirman, SCBD, and Gatot Subroto, making daily commuting faster and more efficient.</p>
+        <p>Living close to the workplace is a significant advantage in a city known for heavy traffic. By reducing travel time, professionals can enjoy a better work-life balance, with more opportunities to exercise, relax, spend time with family, or explore the city's dining and entertainment options.</p>
+        <p>Mega Kuningan also offers a wide range of lifestyle conveniences within easy reach. Residents can enjoy premium shopping malls, international restaurants, cafés, fitness centers, medical facilities, and entertainment venues, all just minutes from home. Whether meeting clients for lunch or enjoying a quiet weekend, everything needed for a comfortable lifestyle is nearby.</p>
+        <p>The district is particularly popular among expatriates thanks to its international atmosphere and high-quality residential developments. Many professionals appreciate the convenience of living in a neighborhood that combines business, leisure, and everyday essentials in one location. For Japanese expatriates, the area also offers authentic Japanese restaurants, specialty grocery stores, and services that help make daily life feel more familiar.</p>
+        <p>Among the premium residences in the area, BRANZ Mega Kuningan offers an exceptional living experience. Developed with Japanese-inspired quality and attention to detail, it combines elegant residences with comprehensive facilities, including a fitness center, swimming pool, sauna, landscaped gardens, residents' lounge, and 24-hour security.</p>
+        <p>Living at BRANZ Mega Kuningan means enjoying the convenience of being close to Jakarta's major business hubs while returning home to a peaceful and well-managed environment. It is an ideal choice for executives, expatriates, and professionals seeking comfort, quality, and accessibility in one of Jakarta's most prestigious neighborhoods.</p>
+        <p>Whether you are relocating to Jakarta or looking for a premium residence in the city's business district, Mega Kuningan offers the perfect combination of connectivity, convenience, and lifestyle. With its strategic location and world-class amenities, it continues to be one of the top residential destinations for professionals from around the world.</p>
       `,
       ja: `
-        <p>
-          ジャカルタの不動産市場は長年にわたりインドネシア経済の基盤であり、アパートメント投資は国内外の
-          バイヤーにとって依然として魅力的な機会を提供しています。しかし、ますます目の肥えた市場において、
-          これまで以上に重要な要素となっているのがロケーションです。
-        </p>
-        <p>
-          メガ・クニンガンは、ジャカルタで最も安定した不動産サブマーケットの一つとして際立っています。
-          プレミアビジネス地区としての地位は、首都での戦略的な拠点を求める法人テナント、駐在員、
-          富裕層からの一貫した需要を意味します。
-        </p>
-        <p>
-          投資用アパートメントを評価する際には、ビジネスセンターへの近接性、建設品質、建物管理、
-          ライフスタイル施設へのアクセスなど、いくつかの要素に注目する必要があります。ブランズは、
-          クニンガンのビジネスエコシステムへの直接接続、日本品質の建設、包括的な施設により、
-          すべての面で高い評価を得ています。
-        </p>
+        <p>住まい選びでは、住居そのものだけでなく、周辺環境も重要なポイントです。ジャカルタで働くビジネスパーソンにとって、メガ・クニンガンは、ビジネスと暮らしの利便性を兼ね備えた人気のエリアとして高く評価されています。優れたアクセス環境、充実した生活施設、そして国際色豊かなコミュニティが、快適な都市生活を実現します。</p>
+        <p>ジャカルタ南部の中心に位置するメガ・クニンガンには、多国籍企業のオフィス、大使館、金融機関、高級ホテル、そして国際的なビジネス施設が集まっています。さらに、スディルマン、SCBD、ガトット・スブロトなど、主要なビジネスエリアへのアクセスも良く、毎日の通勤や移動をスムーズにしてくれます。</p>
+        <p>交通渋滞が多いジャカルタでは、職場の近くに住むことが大きなメリットとなります。通勤時間を短縮することで、仕事だけでなく、家族との時間や趣味、運動、リラックスする時間など、より充実したライフスタイルを実現できます。</p>
+        <p>メガ・クニンガン周辺には、ショッピングモール、レストラン、カフェ、フィットネス施設、医療機関など、日常生活に必要な施設が充実しています。ビジネスランチや週末のお出かけなど、さまざまなシーンで便利な環境が整っており、都市生活を快適にサポートします。</p>
+        <p>また、このエリアは多くの外国人駐在員が暮らす国際的な街としても知られています。日本食レストランや日本食材を扱う店舗、日本人向けのサービスも充実しており、日本人駐在員にとっても安心して生活を始められる環境が整っています。</p>
+        <p>そのメガ・クニンガンを代表するプレミアムレジデンスの一つが、BRANZ Mega Kuninganです。日本品質を大切にした住まいづくりをコンセプトに、洗練された住空間と充実した共用施設を備えています。フィットネスジム、プール、サウナ、ガーデン、レジデントラウンジ、そして24時間体制のセキュリティにより、快適で安心できる暮らしを提供します。</p>
+        <p>BRANZ Mega Kuninganでの暮らしは、ジャカルタの主要ビジネスエリアへの優れたアクセスと、落ち着いた住環境の両方を実現します。エグゼクティブや海外駐在員をはじめ、質の高い都市生活を求める方にとって、理想的な住まいといえるでしょう。</p>
+        <p>ジャカルタへの赴任や新生活をご検討の方にとって、メガ・クニンガンは利便性と快適性を兼ね備えた魅力的なエリアです。ビジネスとプライベートの両方を充実させる住環境として、多くのプロフェッショナルから選ばれ続けています。</p>
       `,
     },
   },
