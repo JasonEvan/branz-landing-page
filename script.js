@@ -510,8 +510,8 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 2,
       image: "assets/img/article/Artikel 2.png",
       title: {
-        en: "Exploring the Mega Kuningan Neighborhood: A Guide for Residents and Investors",
-        ja: "メガ・クニンガンエリアガイド：居住者と投資家のための完全ガイド",
+        en: "Premium Facilities That Make Everyday Life Easier",
+        ja: "毎日の暮らしをより快適にする充実の共用施設",
       },
     },
     {

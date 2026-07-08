@@ -38,43 +38,31 @@ const articleData = [
     id: 2,
     image: "../assets/img/article/Artikel 2.png",
     titles: {
-      en: "Exploring the Mega Kuningan Neighborhood: A Guide for Residents and Investors",
-      ja: "メガ・クニンガンエリアガイド：居住者と投資家のための完全ガイド",
+      en: "Premium Facilities That Make Everyday Life Easier",
+      ja: "毎日の暮らしをより快適にする充実の共用施設",
     },
     descriptions: {
-      en: "Explore Mega Kuningan, South Jakarta's premier business district, and learn why Branz is the ideal home base.",
-      ja: "南ジャカルタのプレミアビジネス地区、メガ・クニンガンをご紹介。ブランズが理想の拠点である理由をご覧ください。",
+      en: "Discover BRANZ Mega Kuningan's premium facilities — fitness center, pool, sauna, gardens, lounge, and 24-hour security — designed for comfort and convenience.",
+      ja: "BRANZ Mega Kuninganの充実した共用施設をご紹介。フィットネスジム、プール、サウナ、ガーデン、ラウンジ、24時間セキュリティなど、快適な毎日をサポートします。",
     },
     contents: {
       en: `
-        <p>
-          Mega Kuningan has established itself as one of Jakarta's most desirable neighborhoods — a place where
-          business, lifestyle, and culture converge. Home to multinational corporations, embassies, and
-          Jakarta's finest dining and retail, this district offers an unparalleled urban experience.
-        </p>
-        <p>
-          For residents of Branz, the neighborhood becomes an extension of home. Within minutes, you can walk
-          to premier shopping centers, enjoy a meal at world-renowned restaurants, or conduct business at
-          nearby corporate towers. The area's excellent road connectivity means that SCBD, Gatot Subroto,
-          and the inner-city toll road are all within easy reach.
-        </p>
-        <p>
-          Investors have taken notice of Mega Kuningan's steady appreciation, driven by limited land supply
-          and sustained demand for premium addresses. Branz sits at the center of this growth story,
-          offering a rare opportunity to own a piece of Kuningan's skyline.
-        </p>
+        <p>A great home is more than just a beautifully designed apartment—it is a place that supports your lifestyle every day. At BRANZ Mega Kuningan, residents enjoy a collection of premium facilities thoughtfully designed to provide comfort, convenience, and relaxation in the heart of Jakarta.</p>
+        <p>Whether you're starting your morning with a workout, unwinding after a busy day, or spending quality time with family, every facility has been created to enhance your daily living experience. The modern fitness center is fully equipped for residents who value an active lifestyle, while the swimming pool offers a refreshing escape from the city's fast pace.</p>
+        <p>For those seeking relaxation, the sauna and beautifully landscaped gardens provide a peaceful retreat where residents can recharge and enjoy quiet moments. The elegant residents' lounge also serves as a comfortable space for casual meetings, reading, or simply enjoying a relaxing afternoon.</p>
+        <p>Families will appreciate the thoughtfully planned communal spaces that encourage a safe and welcoming environment. Every detail, from the building's common areas to its green open spaces, reflects a commitment to creating a comfortable and enjoyable community for residents of all ages.</p>
+        <p>Security and convenience are equally important. BRANZ Mega Kuningan features 24-hour security, professional building management, and controlled access to help residents feel safe and secure at all times. Dedicated management staff also ensure that the property is well maintained, allowing residents to enjoy a worry-free lifestyle.</p>
+        <p>Located in Jakarta's prestigious Mega Kuningan district, the residence is surrounded by international restaurants, cafés, shopping centers, offices, and lifestyle destinations. With everything just minutes away, residents can spend less time commuting and more time enjoying what matters most.</p>
+        <p>At BRANZ Mega Kuningan, premium facilities are not simply added features—they are part of a carefully designed living experience. Combining wellness, comfort, security, and convenience, every element is thoughtfully created to make everyday life easier and more enjoyable for modern urban residents.</p>
       `,
       ja: `
-        <p>
-          メガ・クニンガンは、ビジネス、ライフスタイル、文化が融合するジャカルタで最も魅力的なエリアの一つとして
-          確固たる地位を築いています。多国籍企業、大使館、そしてジャカルタ屈指のダイニングや小売店が集まる
-          この地区は、比類のない都市体験を提供します。
-        </p>
-        <p>
-          ブランズの居住者にとって、このエリアは家の延長となります。数分でプレミアムショッピングセンターまで
-          歩いて行け、世界的に有名なレストランでの食事や、近隣のオフィスビルでのビジネスを楽しめます。
-          エリアの優れた道路接続により、SCBD、ガトット・スブロト、高速道路へのアクセスも容易です。
-        </p>
+        <p>理想的な住まいとは、美しい住空間だけではありません。毎日の生活をより快適で豊かなものにする環境が整っていることも大切です。BRANZ Mega Kuninganでは、都心にいながら心身ともにリラックスできる、充実した共用施設をご用意しています。</p>
+        <p>朝のトレーニングから仕事終わりのリフレッシュ、週末の家族とのひとときまで、さまざまなライフスタイルに対応する施設が揃っています。最新設備を備えたフィットネスジムでは、健康的な毎日をサポートし、開放感あふれるプールでは都会の喧騒を忘れてゆったりとした時間をお過ごしいただけます。</p>
+        <p>さらに、サウナや緑豊かなガーデンスペースは、日々の疲れを癒し、心身をリフレッシュするための理想的な空間です。落ち着いた雰囲気のレジデントラウンジでは、読書やリモートワーク、来客との打ち合わせなど、さまざまなシーンで快適にご利用いただけます。</p>
+        <p>共用スペースは、単身者はもちろん、ご家族でお住まいの方にも心地よくお過ごしいただけるよう設計されています。緑を取り入れた空間設計と洗練された共用エリアが、上質で落ち着いた住環境を演出します。</p>
+        <p>安心して暮らせる環境もBRANZ Mega Kuninganの魅力の一つです。24時間体制のセキュリティと入退館管理システム、そしてプロフェッショナルな管理体制により、日々安心して快適な生活を送ることができます。</p>
+        <p>また、レジデンス周辺にはレストランやカフェ、ショッピングモール、オフィス、医療施設など、生活に必要な施設が充実しています。利便性の高いロケーションにより、移動時間を短縮し、自分や家族との時間をより大切にすることができます。</p>
+        <p>BRANZ Mega Kuninganでは、共用施設は単なる付帯設備ではなく、毎日の暮らしをより豊かにするための大切な要素として設計されています。快適性、利便性、安全性、そして上質な住環境を兼ね備えたこのレジデンスは、ジャカルタで理想のライフスタイルを実現したい方にふさわしい住まいです。</p>
       `,
     },
   },
